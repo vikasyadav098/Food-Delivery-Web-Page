@@ -1,0 +1,52 @@
+
+
+    [
+    {
+        "id":1,
+        "name": "Chicken Burger",
+        "price":"₹229.00",
+        "images":"images/burger.png"
+    },
+    {
+        "id":2,
+        "name": "Chicken Roll",
+        "price":"₹199.00",
+        "images":"images/chicken-roll.png"
+    },
+    {
+        "id":3,
+        "name": "Lasagna",
+        "price":"₹230.00",
+        "images":"images/lasagna.png"
+    },
+    {
+        "id":4,
+        "name": "Pizza",
+        "price":"₹399.00",
+        "images":"images/pizza.png"
+    },
+    {
+        "id":5,
+        "name": "Sandwitch",
+        "price":"₹199.00",
+        "images":"images/sandwich.png"
+    },
+    {
+        "id":6,
+        "name": "Spaghetii",
+        "price":"₹150.00",
+        "images":"images/spaghetti.png"
+    },
+    {
+        "id":7,
+        "name": "Spring Roll",
+        "price":"₹269.00",
+        "images":"images/spring-roll.png"
+    },
+    {
+        "id":8,
+        "name": "Fried-Chicken",
+        "price":"₹499.99",
+        "images":"images/fried-chicken.png"
+    }
+]
