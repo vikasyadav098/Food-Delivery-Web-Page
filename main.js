@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: "#next",
     prevEl: "#prev",
-  },
+  },  
 });
 
 const cartIcon = document.querySelector(".cart-icon");
