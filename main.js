@@ -16,6 +16,14 @@ const cartValue = document.querySelector(".cart-value");
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
 const bars = document.querySelector(".fa-bars");
+const checkoutBtn= document.getElementById('checkout-btn');
+
+
+
+
+
+
+
 
 cartIcon.addEventListener("click", () =>
   cartTab.classList.add("cart-tab-active")
@@ -50,9 +58,13 @@ const updateTotals = () => {
 
   cardTotal.textContent = `₹${totalPrice.toFixed(2)}`;
   cartValue.textContent = totalQuantity;
+
+  
+
 };
 
-// 🔥 SHOW PRODUCT CARDS
+ 
+//  SHOW PRODUCT CARDS
 const showCards = () => {
   productList.forEach((product) => {
     const orderCard = document.createElement("div");
@@ -166,6 +178,9 @@ const addToCart = (product) => {
   });
 };
 
+
+
+
 // INIT APP
 const initApp = () => {
   fetch("products.json")
@@ -177,3 +192,35 @@ const initApp = () => {
 };
 
 initApp();
+
+
+checkoutBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let totalAmount = parseFloat(cardTotal.textContent.replace("₹", "")) * 100;
+
+  if (totalAmount <= 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  var options = {
+    key: "rzp_test_SL7LJLwV2S9009",
+    amount: totalAmount,
+    currency: "INR",
+    name: "Fork Fusion",
+    description: "Food Order Payment",
+
+    handler: function (response) {
+      alert("Payment Successful 🎉");
+      console.log(response);
+    },
+
+    theme: {
+      color: "#ff5e00"
+    }
+  };
+
+  var rzp1 = new Razorpay(options);
+  rzp1.open();
+});
