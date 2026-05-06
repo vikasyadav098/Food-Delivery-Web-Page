@@ -7,7 +7,7 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-:root {
+:root { 
   --lead: #212121;
   --gold-finger: #F2BD12;
   --eye-ball: #FFFDF7;
@@ -888,4 +888,3 @@ input[type="email"]:focus{
     padding-inline: 1rem;
   }
 }
-
